@@ -1,0 +1,6 @@
+{
+  "name": "Veritas Apothecary — Medical Shop & Clinical Pharmacy",
+  "description": "Clinical pharmacy storefront, walk-in point-of-sale billing terminal, FEFO batch & expiry inventory ledger, and prescription verification system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
