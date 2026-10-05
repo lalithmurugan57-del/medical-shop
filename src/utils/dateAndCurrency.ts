@@ -1,7 +1,10 @@
 import { MedicineProduct, DrugInteraction } from '../types/pharmacy';
 
 export function formatCurrency(amount: number): string {
-  return `$${amount.toFixed(2)}`;
+  return `₹${amount.toLocaleString('en-IN', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}`;
 }
 
 export function getDaysUntilExpiry(expiryDateStr: string): number {

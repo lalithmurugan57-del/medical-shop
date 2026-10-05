@@ -59,8 +59,8 @@ export const InventoryLedgerView: React.FC<InventoryLedgerViewProps> = ({
     useState<StorageCondition>('Ambient (15°C–25°C)');
   const [packSize, setPackSize] = useState('Strip of 6 Film-Coated Tablets');
   const [manufacturer, setManufacturer] = useState('Pfizer Clinical Labs');
-  const [unitCost, setUnitCost] = useState('9.50');
-  const [price, setPrice] = useState('15.80');
+  const [unitCost, setUnitCost] = useState('140.00');
+  const [price, setPrice] = useState('210.00');
   const [stock, setStock] = useState('40');
   const [reorderLevel, setReorderLevel] = useState('15');
   const [dosageGuidance, setDosageGuidance] = useState(
@@ -184,8 +184,8 @@ export const InventoryLedgerView: React.FC<InventoryLedgerViewProps> = ({
       storageCondition,
       packSize: packSize.trim() || 'Standard Clinical Pack',
       manufacturer: manufacturer.trim() || 'Veritas Pharmaceutical Partners',
-      unitCost: Math.max(1, parseFloat(unitCost) || 10),
-      price: Math.max(1, parseFloat(price) || 16),
+      unitCost: Math.max(1, parseFloat(unitCost) || 140),
+      price: Math.max(1, parseFloat(price) || 210),
       gstRate: 12,
       stock: Math.max(1, parseInt(stock, 10) || 25),
       reorderLevel: Math.max(5, parseInt(reorderLevel, 10) || 10),
@@ -706,7 +706,7 @@ export const InventoryLedgerView: React.FC<InventoryLedgerViewProps> = ({
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-stone-700 mb-1">
-                    Unit Cost ($)
+                    Unit Cost (₹)
                   </label>
                   <input
                     type="number"
@@ -718,7 +718,7 @@ export const InventoryLedgerView: React.FC<InventoryLedgerViewProps> = ({
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-stone-700 mb-1">
-                    Retail MRP ($)
+                    Retail MRP (₹)
                   </label>
                   <input
                     type="number"

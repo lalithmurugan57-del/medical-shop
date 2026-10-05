@@ -34,10 +34,10 @@ type ActiveTab =
   | 'orders';
 
 const STORAGE_KEYS = {
-  PRODUCTS: 'veritas_apothecary_products_v1',
-  PRESCRIPTIONS: 'veritas_apothecary_rx_v1',
-  ORDERS: 'veritas_apothecary_orders_v1',
-  CART: 'veritas_apothecary_cart_v1',
+  PRODUCTS: 'veritas_apothecary_products_v2',
+  PRESCRIPTIONS: 'veritas_apothecary_rx_v2',
+  ORDERS: 'veritas_apothecary_orders_v2',
+  CART: 'veritas_apothecary_cart_v2',
 };
 
 export default function App() {

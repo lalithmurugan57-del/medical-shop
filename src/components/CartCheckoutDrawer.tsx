@@ -35,7 +35,7 @@ interface CartCheckoutDrawerProps {
   onViewOrdersLedger: () => void;
 }
 
-const FREE_DELIVERY_THRESHOLD = 75.0;
+const FREE_DELIVERY_THRESHOLD = 500.0;
 
 export const CartCheckoutDrawer: React.FC<CartCheckoutDrawerProps> = ({
   isOpen,
@@ -116,7 +116,7 @@ export const CartCheckoutDrawer: React.FC<CartCheckoutDrawerProps> = ({
   const taxableBase = Math.max(0, subtotal - discountAmount);
   const taxAmount = Number((taxableBase * 0.08).toFixed(2));
   const deliveryFee =
-    subtotal >= FREE_DELIVERY_THRESHOLD || subtotal === 0 ? 0 : 6.5;
+    subtotal >= FREE_DELIVERY_THRESHOLD || subtotal === 0 ? 0 : 45.0;
   const totalAmount = Number(
     (taxableBase + taxAmount + deliveryFee).toFixed(2)
   );
@@ -590,7 +590,7 @@ export const CartCheckoutDrawer: React.FC<CartCheckoutDrawerProps> = ({
                   </span>
                 </div>
                 <div className="flex justify-between text-stone-600">
-                  <span>Courier Dispatch (Threshold $75.00)</span>
+                  <span>Courier Dispatch (Threshold ₹500.00)</span>
                   <span className="font-mono tabular-nums">
                     {deliveryFee === 0 ? 'Free' : formatCurrency(deliveryFee)}
                   </span>
